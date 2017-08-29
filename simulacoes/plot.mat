@@ -1,0 +1,39 @@
+p = 2;
+H = 5;
+m = 1;
+
+mu = 1;
+alpha = 0.0001;
+
+epoch = 50000;
+MSEmin = 1e-20;
+%arquivox1
+arquivox1 = fopen('X1.txt');
+x1 = fscanf(arquivox1,'%lf');
+fclose(arquivox1);
+%arquivox2
+arquivox2 = fopen('X2.txt');
+x2 = fscanf(arquivox2,'%lf');
+fclose(arquivox2);
+%pontostreinamento
+% pontosentrada = fopen('X.txt');
+% X = fscanf(pontosentrada,'%f');
+% fclose(pontosentrada);
+%pontossaida
+X = [x1,x2];
+pontossaida = fopen('D.txt');
+D = fscanf(pontossaida,'%lf');
+fclose(pontossaida);
+
+% surf(x1,x2,D);
+%TREINAMENTORNA
+% [Wx,Wy,MSE]=trainMLP(p,H,m,mu,alpha,X',D',epoch,MSEmin);
+% 
+% semilogy(MSE);
+% 
+% disp(['D = [' num2str(Daux) ']']);
+% 
+% %VALIDAÇÃO
+% Y = runMLP(X',Wx,Wy);
+% 
+% disp(['Y = [' num2str(Y) ']']);

@@ -1,0 +1,22 @@
+ The matrix implementation of the Backpropagation algorithm for two-layer
+ Multilayer Perceptron (MLP) neural networks.
+
+ Author: Marcelo Augusto Costa Fernandes
+ DCA - CT - UFRN
+ mfernandes@dca.ufrn.br
+
+ Input parameters:
+   p: Number of the inputs.
+   H: Number of hidden neurons
+   m: Number of output neurons
+   mu: Learning-rate parameter
+   alpha: Momentum constant
+   X: Input matrix.  X is a (p x N) dimensional matrix, where p is a number of the inputs and N is a training size.
+   D: Desired response matrix. D is a (m x N) dimensional matrix, where m is a number of the output neurons and N is a training size.
+   epochMax: Maximum number of epochs to train.
+   MSETarget: Mean square error target.
+
+ Output parameters:
+   Wx: Hidden layer weight matrix. Wx is a (H x p+1) dimensional matrix.
+   Wy: Output layer weight matrix. Wy is a (m x H+1) dimensional matrix.
+   MSE: Mean square error vector. 
